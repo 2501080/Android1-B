@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">첫번째 App</string>
+    <string name="message">안녕하세요!</string>
+</resources>
