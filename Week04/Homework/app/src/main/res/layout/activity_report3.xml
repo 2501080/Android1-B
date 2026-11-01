@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".Report3Activity">
+
+    <!-- 섭씨 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/celsiusView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="섭씨온도(0.0 ℃)" />
+
+        <SeekBar
+            android:id="@+id/celsiusSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200"
+            android:progress="100" />
+    </LinearLayout>
+
+    <!-- 화씨 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/fahrenheitView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="화씨온도(0.0 ℉)" />
+
+        <SeekBar
+            android:id="@+id/fahrenheitSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="200"
+            android:progress="100" />
+    </LinearLayout>
+
+    <!-- 라디오 버튼 + 버튼 2개 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/radioCtoF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="섭씨를 화씨로" />
+
+            <RadioButton
+                android:id="@+id/radioFtoC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="화씨를 섭씨로" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/convertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="변환" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="초기화" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="20sp" />
+</LinearLayout>
